@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="header">
+        <div class="flower">
+            <img width="100px" src="/picture.jpg/z2975674019379_852d5a1b91939a67ed728aa8c78c8427-removebg-preview.png" alt="">
+       
+        <h2>
+            🐻‍❄️Huu Dung😗</h2> 
+       <div class="icon"></div>
+        </div>
+
+        <ul>
+            
+            <li>About me</li>
+            <li>Resume</li>
+            <li>Work</li>
+            <li id="gettouch">Get to Touch</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="text">
+        <h1 id="one">PORTFOLIO</h1>
+        <h1 id="two">PORTFOLIO</h1>
+        <h1 id="three">PORTFOLIO</h1>
+        <h1 id="four">PORTFOLIO</h1>
+        </div>
+
+        <div class="imgbox">
+        <img id="anh" src="/picture.jpg/image.png" alt="">
+        </div>
+        <div class="comment">I have technology and everything related to information technology<br>
+        I approach problems logically and practicallt,<br>
+    always seeking the most efficient and innovative solutions.</div>
+    </div>
+    <div class="sector">
+        <h2>Facebook</h2><br>
+        <h2>Zalo</h2><br>
+        <h2>Messenger</h2>
+    </div>
+    <div class="scroll">Scroll down</div>
+    <div class="book">
+  <div class="page" id="page">
+    <div class="front">PAGE 1</div>
+    <div class="back"></div>
+  </div>
+  <div class="next">PAGE 2</div>
+</div>
+
+</body>
+<script>
+const page = document.getElementById("page");
+const slices = 36;
+const width = 420;
+
+// tạo lát
+for (let i = 0; i < slices; i++) {
+  const s = document.createElement("div");
+  s.className = "slice";
+  s.style.width = width / slices + "px";
+  s.style.left = (i * width / slices) + "px";
+  page.appendChild(s);
+}
+
+let dragging = false;
+
+page.addEventListener("mousedown", () => dragging = true);
+window.addEventListener("mouseup", () => dragging = false);
+
+window.addEventListener("mousemove", e => {
+  if (!dragging) return;
+
+  const rect = page.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+
+  document.querySelectorAll(".slice").forEach((slice, i) => {
+    const sx = (i + 0.5) * (width / slices);
+
+    // khoảng cách chuột -> lát
+    const dx = Math.abs(mx - sx);
+    const dy = Math.abs(my - rect.height);
+
+    // lực cong
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    const force = Math.max(0, 1 - dist / 500);
+
+    const angle = -force * 160;
+    const lift = force * 60;
+
+    slice.style.transform = `
+      translateZ(${lift}px)
+      rotateY(${angle}deg)
+    `;
+
+    slice.style.boxShadow =
+      `-${force * 20}px 0 ${force * 40}px rgba(0,0,0,0.35)`;
+  });
+});
+</script>
+
+
+</html>
