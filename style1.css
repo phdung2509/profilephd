@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+}
+.red{
+    color: rgb(0, 255, 255);
+    font-size: 25px;
+}
+.logo{
+    color: white;
+    font-size: 40px;
+    animation: slideright 1s ease forwards;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 85%;
+    margin: auto;
+    border-bottom: 1px solid cyan ;
+}
+.nav {
+    display: flex;
+    gap:100px; 
+    list-style: none;
+   
+}
+.follow {
+    color: white;
+    text-decoration: none;
+    border:2px solid cyan;
+    border-radius: 20px;
+    padding: 10px;
+     animation: slideleft  0.5s ease forwards;
+    animation-delay: 2s;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.follow:hover{
+    color:black;
+    background: cyan;
+    box-shadow:0 0 20px cyan;
+}
+.nav a{
+    text-decoration:none ; 
+    color: white;
+    font-size: 20px;
+     margin: 10px 20px;
+   
+}
+.nav li{
+    font-weight: bold;
+    animation: slidetop 3s ease forwards;
+    opacity: 0;
+}
+.nav a:hover{
+    color: cyan;
+    transform: scale(3);
+}
+.content{
+    margin-left: 8% ;
+    margin-top: 8%;
+}
+.content .img{
+    width: 30%;
+    height: 80%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+.content .img img{
+    width: 60%;
+    max-width: 530px;
+    opacity: 0;
+    animation: zoomin 1s ease forwards, floatimage 4s ease-in-out infinite;
+    animation-delay: 1s, 3s;
+    filter: drop-shadow(1px 1px 20px cyan);
+    border-radius: 30%;
+}
+@keyframes slidetop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideright {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideleft {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes floatimage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes zoomin {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.text0{
+    font-size: 30px;
+}
+.text1{
+    font-size: 50px;
+    color: cyan;
+    padding-top: 30px;
+    padding-left: 40px;
+}
+.text2{
+    font-size: 30px;
+    padding-top: 30px; 
+    padding-left: 60px;
+}
+.text3{
+    color: cyan;
+}
+.text{
+    animation: slideright 3s ease forwards;
+}
+.img1 img{
+    position: absolute;
+    height: 40%;
+    top: 64%;
+}
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .logo{
+        font-size: 40px;
+        padding-left: 2%;
+    }

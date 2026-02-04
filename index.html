@@ -1,113 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
-
     <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="LOGO.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name = "viewport" content = "width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0"/>
 </head>
 <body>
-    <div class="header">
-        <div class="flower">
-            <img width="100px" src="img/z2975674019379_852d5a1b91939a67ed728aa8c78c8427-removebg-preview.png" alt="">
-       
-        <h2>
-            🐻‍❄️Huu Dung😗</h2> 
-       <div class="icon"></div>
+    <div class="container">
+        <nav>
+            <h2 class="logo">Port<span class="blue">folio</span></h2>
+            <ul>
+                <li><a href="#HOME" style="--i:1;">HOME</a></li>
+                <li><a href="#ABOUTME" style="--i:2;">ABOUTME</a></li>
+                <li><a href="#PROJECTS" style="--i:3;">PROJECTS</a></li>
+                <li><a href="#SKILLS" style="--i:4;">SKILLS</a></li>
+                <li><a href="#CONTACT ME" style="--i:5;">CONTACT ME</a></li>
+            </ul>
+            <a href="#" class="Follow">Follow Me</a>
+        </nav>
+        <div class="content">
+            <div class="text">
+                <h4>Hello, my name is</h4>
+                <h1>Mayada <span> Saeed</span></h1>
+                <h3>I'm a <span> Web Developer</span></h3>
+            </div>
+            <div class="img"><img src="/img/pic1.m.png"></div>
         </div>
+        <div class="social-media">
+            <a href="" target="_blank" style="--i:6;"><i class='bx bxl-facebook'></i></a>
+            <a href="" target="_blank" style="--i:7;"><i class='bx bxl-gmail'></i></a>
+            <a href="https://github.com/Mayadasaeed" target="_blank"style="--i:8;"><i class='bx bxl-github'></i></a>
+            <a href="" target="_blank" style="--i:9;"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://www.linkedin.com/in/mayada-saeed-30b8262b2/" target="_blank" style="--i:10;"><i class='bx bxl-linkedin'></i></a>
+        </div>
+        <br>
+        <div>
+            <a class="cv" href="#">DOWNLOAD CV</a>
+        </div>
+    </div>
+<section class="ABOUTME">
+    <div class="img2">
+        <img src="Mind map-rafiki.png" alt="">
+    </div>
+    <div class="text2">
+       <h2>ABOUT <span> me</span></h2>
+       <br>
+       <p>Specializing in front-end development.
+        Experience designing and developing innovative
+        user interfaces using<span> HTML, CSS, and JavaScript,</span>
+        as well as <span>React.js.</span> My goals revolve around
+        creating unique user experiences and constantly
+        developing my skills. I always strive to develop myself
+        and my skills by following the latest technologies and trends
+        in the world of front-end development.
+       </p>
+    </div>
+</section>
+<!-- my projects -->
+<section class="projects" id="projects">
+    <div class="heading">
+        <h3><span>My</span> Projects</h3>
+    </div>
 
-        <ul>
+         <div class="projects-content">
+            <div class="col">
+                <img class="imges" id="im2" src="Screenshot 2024-03-13 050521.png">
+                <div class="layer">
+                    <h3>login form 2</h3>
+                    <a href="https://mayadasaeed.github.io/login-forms/login%20form%202/" target="_blank"><h5>show Website</h5></a>
+                </div>
+            </div>
+
+        <div class="projects-content">
+            <div class="col">
+                <img class="imges" id="im2" src="Screenshot 2024-03-04 185510.png">
+                <div class="layer">
+                    <h3>Portfolio Design</h3>
+                    <a href="https://mayadasaeed.github.io/My-projects-courses/Assignment4/" target="_blank"><h5>show Website</h5></a>
+                </div>
+            </div>
+
+            <div class="projects-content">
+                <div class="col">
+                    <img class="imges" id="im3" src="Screenshot 2024-03-04 185620.png">
+                    <div class="layer">
+                        <h3>Image Generator</h3>
+                        <a href="https://mayadasaeed.github.io/projects/image%20genaratore/" target="_blank"><h5>show Website</h5></a>
+                    </div>
+                </div>
+
+                <div class="projects-content">
+                    <div class="col">
+                        <img class="imges" id="im2" src="Screenshot 2024-03-13 050340.png">
+                        <div class="layer">
+                            <h3>login form 1</h3>
+                            <a href="https://mayadasaeed.github.io/login-forms/login%20form1/" target="_blank"><h5>show Website</h5></a>
+                        </div>
+                    </div>
+
+
             
-            <li>About me</li>
-            <li>Resume</li>
-            <li>Work</li>
-            <li id="gettouch">Get to Touch</li>
-        </ul>
     </div>
-    <div class="content">
-        <div class="text">
-        <h1 id="one">PORTFOLIO</h1>
-        <h1 id="two">PORTFOLIO</h1>
-        <h1 id="three">PORTFOLIO</h1>
-        <h1 id="four">PORTFOLIO</h1>
+</section>
+<!-- my skills -->
+<section class="skills">
+   <div class="title">
+    <pre><h3>♡         <span>Skills</span></spanSkills>          ♡ </h3></pre>
+   </div>
+    <div class="all-icons">
+
+        <div class="icons-skills">
+
+          <div class="mmm"> <img class="size" src="file_type_html_icon_130541.png">
+           <img class="size" src="file_type_css_icon_130661.png">
+           <img class="size" src="file_type_js_icon_130510.png">
+        <pre class="style">    Html          Css        JavaScript</pre></div>
         </div>
 
-        <div class="imgbox">
-        <img id="anh" src="img/image.png" alt="">
+        <div class="icons-skills">
+           <img class="size" src="file_type_python_icon_130221.png">
+           <img class="size" src="bootstrap-logo-shadow.png">
+           <pre class="style">  python   Bootstrap</pre>
         </div>
-        <div class="comment">I have technology and everything related to information technology<br>
-        I approach problems logically and practicallt,<br>
-    always seeking the most efficient and innovative solutions.</div>
-    </div>
-    <div class="sector">
-        <h2>Facebook</h2><br>
-        <h2>Zalo</h2><br>
-        <h2>Messenger</h2>
-    </div>
-    <div class="scroll">Scroll down</div>
-    <div class="book">
-  <div class="page" id="page">
-    <div class="front">PAGE 1</div>
-    <div class="back"></div>
-  </div>
-  <div class="next">PAGE 2</div>
-</div>
 
+        <div class="icons-skills">
+        <img class="size" src="canva_logo_icon_168459.png">
+        <pre class="style"> Canva</pre>
+
+        </div> 
+
+   </div>
+
+   <section class=""></section>
+</section>
 </body>
-<script>
-const page = document.getElementById("page");
-const slices = 36;
-const width = 420;
-
-// tạo lát
-for (let i = 0; i < slices; i++) {
-  const s = document.createElement("div");
-  s.className = "slice";
-  s.style.width = width / slices + "px";
-  s.style.left = (i * width / slices) + "px";
-  page.appendChild(s);
-}
-
-let dragging = false;
-
-page.addEventListener("mousedown", () => dragging = true);
-window.addEventListener("mouseup", () => dragging = false);
-
-window.addEventListener("mousemove", e => {
-  if (!dragging) return;
-
-  const rect = page.getBoundingClientRect();
-  const mx = e.clientX - rect.left;
-  const my = e.clientY - rect.top;
-
-  document.querySelectorAll(".slice").forEach((slice, i) => {
-    const sx = (i + 0.5) * (width / slices);
-
-    // khoảng cách chuột -> lát
-    const dx = Math.abs(mx - sx);
-    const dy = Math.abs(my - rect.height);
-
-    // lực cong
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    const force = Math.max(0, 1 - dist / 500);
-
-    const angle = -force * 160;
-    const lift = force * 60;
-
-    slice.style.transform = `
-      translateZ(${lift}px)
-      rotateY(${angle}deg)
-    `;
-
-    slice.style.boxShadow =
-      `-${force * 20}px 0 ${force * 40}px rgba(0,0,0,0.35)`;
-  });
-});
-</script>
-<h3>helo</h3>
 
 </html>
